@@ -1,12 +1,12 @@
-## DoMod
+## DOMod
 
 
-DoMod is a DOM manipulation library built in vanilla JavaScript that mimics jQuery functionality with respect to DOM manipulation and traversal functions.  
+DOMod is a DOM manipulation library built in vanilla JavaScript that mimics jQuery functionality with respect to DOM manipulation and traversal functions.  
 
 
 ###  The global variable $l
 
-$l acts as a wrapper for all of the methods in the library, returning a DOMNodeCollection object, which stores an array of HTML Elements matching the selector. $l can also be used to create DOMNodeCollection objects from unwrapped HTML Elements, giving these elements access to DoMod methods. Additionally, $l can also take in a string of HTML code, build an HTML Element, and then return a DOMNodeCollection.
+$l acts as a wrapper for all of the methods in the library, returning a DOMNodeCollection object, which stores an array of HTML Elements matching the selector. $l can also be used to create DOMNodeCollection objects from unwrapped HTML Elements, giving these elements access to DOMod methods. Additionally, $l can also take in a string of HTML code, build an HTML Element, and then return a DOMNodeCollection.
 
 
 
@@ -84,4 +84,4 @@ error | `() => {}`
 
 ### Use
 
-To use DoMod, install the library in your project, and include the webpack output file 'domod.js' in your source code.
+To use DOMod, install the library in your project, and include the webpack output file 'DOMod.js' in your source code.
