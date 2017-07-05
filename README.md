@@ -74,12 +74,12 @@ Makes an asynchronous XMLHTTPRequest to request, send, display, and/or use data 
 
 option | default
 --- | ---
-method | `'get'`
-url | `document.location.pathname`
+method | `'GET'`
+url | `window.location.href`
 contentType | `'application/x-www-form-urlencoded; charset=UTF-8'`
 data | `{}`
-success | `() => {}`
-error | `() => {}`
+success | `null`
+error | `null`
 
 
 ### Use
