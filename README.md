@@ -44,29 +44,29 @@ Empties the innerHTML of each DOMNodeCollection element.
 
 #### `find`
 
-Finds and returns a DOMNodeCollection containing all children and subchildren that match selector.
+Finds and returns a DOMNodeCollection containing all children and descendants that match selector.
 
 #### `html`
 
-Returns the "innerHTML" for the first element in the DOMNodeCollection if no argument is given.  If a string argument is given, changes the "innerHTML" of each DOMNodeCollection element to content.
+Returns the "innerHTML" for the first element in the DOMNodeCollection if no argument is given.  If a string argument is given, changes the "innerHTML" of each DOMNodeCollection element to the content specified.
 
 #### `remove`
 
-Remove each DOMNodeCollection element that matches the selector from the DOM.
+Removes each DOMNodeCollection element that matches the specified selector from the DOM.
 
 #### `removeClass`
 
-Removes a class, given as an argument, from each DOMNodeCollection element.
+Removes a class from each DOMNodeCollection element.
 
 ### Event Listeners
 
 #### `on`
 
-Adds event listener to each DOMNodeCollection element.
+Adds an event listener to each DOMNodeCollection element.
 
 #### `off`
 
-Removes event listener from each DOMNodeCollection element.
+Removes an event listener from each DOMNodeCollection element.
 
 ### AJAX
 
