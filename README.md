@@ -70,17 +70,28 @@ Removes an event listener from each DOMNodeCollection element.
 
 ### AJAX
 
-Makes an asynchronous XMLHTTPRequest to request, send, display, and/or use data from a web server. Takes an options object as its arguments -- the options and their defaults include:
+Makes an asynchronous XMLHTTPRequest to request, send, display, and/or use data from a web server. Takes an options object as its arguments and returns a `Promise` object.
 
-option | default
---- | ---
-method | `'GET'`
-url | `window.location.href`
-contentType | `'application/x-www-form-urlencoded; charset=UTF-8'`
-data | `{}`
-success | `null`
-error | `null`
+The default parameters are:
+```
+{
+  contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+  method: 'GET',
+  url: '',
+  success: () => {},
+  error: () => {},
+  data: {}
+}
+```
 
+Example usage:
+
+``` JavaScript
+const targetUrl = 'http://api.fixer.io/latest?base=USD';
+$l.ajax({type: 'GET', url: targetUrl})
+  .then((response) => console.log(response))
+  .catch((error) => console.log(error.status, error.statusText))
+```
 
 ### Use
 
