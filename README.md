@@ -1,6 +1,7 @@
 ## DOMod
 
 [Live Demo](https://elimor5.github.io/DoMod-Demo---Currency-Converter/)
+[Demo Code](https://github.com/Elimor5/DoMod-Demo---Currency-Converter)
 
 DOMod is a DOM manipulation library built in vanilla JavaScript that mimics jQuery functionality with respect to DOM manipulation and traversal functions.  
 
