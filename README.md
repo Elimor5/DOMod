@@ -1,5 +1,6 @@
 ## DOMod
 
+[Live Demo](https://elimor5.github.io/DoMod-Demo---Currency-Converter/)
 
 DOMod is a DOM manipulation library built in vanilla JavaScript that mimics jQuery functionality with respect to DOM manipulation and traversal functions.  
 
@@ -70,7 +71,7 @@ Removes an event listener from each DOMNodeCollection element.
 
 ### AJAX
 
-Makes an asynchronous XMLHTTPRequest to request, send, display, and/or use data from a web server. Takes an options object as its arguments and returns a `Promise` object.
+Makes an asynchronous XMLHTTPRequest to request, send, display, and/or use data from a web server. Takes an options object as its arguments and returns a chainable `Promise` object.
 
 The default parameters are:
 ```
@@ -87,10 +88,21 @@ The default parameters are:
 Example usage:
 
 ``` JavaScript
-const targetUrl = 'http://api.fixer.io/latest?base=USD';
-$l.ajax({type: 'GET', url: targetUrl})
-  .then((response) => console.log(response))
-  .catch((error) => console.log(error.status, error.statusText))
+const targetUrl = `https://api.fixer.io/latest?base=${mainCurrency}`;
+
+    $l.ajax({type: "GET", url: targetUrl,})
+      .then((response) => {
+        obj = JSON.parse(response);
+        const comparedRate = obj.rates[comparedCurrency];
+        $l("#comparison").append(`<li class="compare-result">1 ${mainCurrency} = ${comparedRate} ${comparedCurrency}</li>`);
+        $l("#comparison").append(`<button class="swap"><i class="fa fa-exchange" aria-hidden="true"></i></button>`);
+      })
+      .then(() => {
+        $l(".swap").on("click",() => {
+          $l(comparison).empty();
+          compareCurrencies(comparedCurrency, mainCurrency);
+        });
+      });
 ```
 
 ### Use
